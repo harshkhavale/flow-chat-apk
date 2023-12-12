@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:layout_gravity="bottom"
+    tools:context=".Fragments.GalleryFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/sendForwordBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/done_logo" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/images"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="?selectableItemBackground"
+                    android:padding="8dp"
+                    android:src="@drawable/modelandscape" />
+
+                <ImageView
+                    android:id="@+id/videos"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="?selectableItemBackground"
+
+                    android:padding="8dp"
+                    android:src="@drawable/video_logo" />
+
+                <ImageView
+                    android:id="@+id/audios"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="2"
+                    android:background="?selectableItemBackground"
+                    android:padding="8dp"
+                    android:src="@drawable/album" />
+
+                <ImageView
+                    android:id="@+id/documents"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="2"
+                    android:background="?selectableItemBackground"
+                    android:padding="8dp"
+                    android:src="@drawable/documents_icon" />
+
+                <ImageView
+                    android:id="@+id/contacts"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="2"
+                    android:background="?selectableItemBackground"
+                    android:padding="8dp"
+                    android:src="@drawable/modeportrait" />
+
+                <ImageView
+                    android:id="@+id/location"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="2"
+                    android:background="?selectableItemBackground"
+                    android:padding="8dp"
+                    android:src="@drawable/location" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/selectedItemsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/itemsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:fontFamily="@font/happy_monkey"
+                    android:gravity="center|center_vertical"
+                    android:text="items selected"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/clearAll"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:src="@drawable/delete" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/exploreContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/explore"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/folders_logo" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/happy_monkey"
+                    android:gravity="center_vertical"
+                    android:text="Browse from storage..." />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
